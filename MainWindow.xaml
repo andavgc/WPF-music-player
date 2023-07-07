@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_music_player.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_music_player"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="2*"/>
+        <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#0E2954"/>
+        <Border Grid.Row="1" Background="#84A7A1"/>
+        
+        <!-- <StackPanel Grid.Row="1" VerticalAlignment="Center"> -->
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <Viewbox Stretch="Uniform">
+                <Grid Width="120" Height="120">
+                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\play.png" Margin="30"/>
+                </Grid>
+            </Viewbox>
+        </Grid>
+        <!-- </StackPanel> -->
+    </Grid>
+</Window>

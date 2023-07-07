@@ -1,0 +1,21 @@
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player_MarkupCompile.cache
+C:\Users\USER\Documents\WPF music player\bin\Debug\net6.0-windows\WPF music player.exe
+C:\Users\USER\Documents\WPF music player\bin\Debug\net6.0-windows\WPF music player.deps.json
+C:\Users\USER\Documents\WPF music player\bin\Debug\net6.0-windows\WPF music player.runtimeconfig.json
+C:\Users\USER\Documents\WPF music player\bin\Debug\net6.0-windows\WPF music player.dll
+C:\Users\USER\Documents\WPF music player\bin\Debug\net6.0-windows\WPF music player.pdb
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player_MarkupCompile.lref
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\MainWindow.baml
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.g.resources
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.AssemblyInfoInputs.cache
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.AssemblyInfo.cs
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.dll
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\refint\WPF music player.dll
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.pdb
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.genruntimeconfig.cache
+C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\ref\WPF music player.dll
