@@ -20,16 +20,35 @@
             </Viewbox>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Viewbox Width="40" Height="40" Stretch="Uniform" VerticalAlignment="Stretch" Margin="30, 0">
+        <StackPanel Grid.Row="1">
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Viewbox Width="50" Height="15" Stretch="Uniform" >
+                        <TextBlock Foreground="Black" FontSize="20" Text="0:00"/>
+                </Viewbox>
+                <Viewbox Width="350" Height="30" Stretch="Uniform">
+                    <Grid>
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\duration.png" />
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\timeLapse.png" />
+                    </Grid>
+                </Viewbox> 
+                <Viewbox Width="50" Height="15" Stretch="Uniform" >
+                        <TextBlock Foreground="Black" FontSize="20" Text="5:00"/>
+                </Viewbox>  
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
                     <Image Source="C:\Users\USER\Documents\WPF music player\Assets\previous.png" />
                 </Viewbox>  
-                <Viewbox Width="80" Height="80" Stretch="Uniform" VerticalAlignment="Stretch" Margin="30, 0">
+                <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="30, 0">
                     <Image Source="C:\Users\USER\Documents\WPF music player\Assets\play.png" />
                 </Viewbox> 
-                <Viewbox Width="40" Height="40" Stretch="Uniform" VerticalAlignment="Stretch" Margin="30, 0">
+                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
                     <Image Source="C:\Users\USER\Documents\WPF music player\Assets\next.png" />
                 </Viewbox>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </Window>
