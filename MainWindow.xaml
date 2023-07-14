@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
         <RowDefinition Height="2*"/>
         <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions> 
         <Border Grid.Row="0" Background="#0E2954"/>
         <Border Grid.Row="1" Background="#84A7A1"/>
 
@@ -21,34 +21,55 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1">
-
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Viewbox Width="50" Height="15" Stretch="Uniform" >
+                <Viewbox Width="50" Height="20" Stretch="Uniform" >
                         <TextBlock Foreground="Black" FontSize="20" Text="0:00"/>
                 </Viewbox>
-                <Viewbox Width="350" Height="30" Stretch="Uniform">
+                <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="left">
                     <Grid>
                         <Image Source="C:\Users\USER\Documents\WPF music player\Assets\duration.png" />
-                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\timeLapse.png" />
+                        <Image x:Name="timeLapse" Source="C:\Users\USER\Documents\WPF music player\Assets\timeLapse.png" Margin="0"/>
                     </Grid>
                 </Viewbox> 
-                <Viewbox Width="50" Height="15" Stretch="Uniform" >
+                <Viewbox Width="50" Height="20" Stretch="Uniform" >
                         <TextBlock Foreground="Black" FontSize="20" Text="5:00"/>
                 </Viewbox>  
             </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 0, 0, 10">
+                <Viewbox Height="15" Stretch="Uniform" >
+                    <TextBlock Foreground="Black" FontSize="10" Name="SongName" Text="The bends" />
+                </Viewbox>
 
+                <Viewbox Height="15" Stretch="Uniform" >
+                    <TextBlock Foreground="Black" FontSize="10" Text=" - " />
+                </Viewbox>
+                <Viewbox Height="15" Stretch="Uniform">
+                    <TextBlock Foreground="Black" FontSize="10" Name="ArtistName" Text="Radiohead" />
+                </Viewbox>
+            </StackPanel>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+
                 <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
+                <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
                     <Image Source="C:\Users\USER\Documents\WPF music player\Assets\previous.png" />
-                </Viewbox>  
+                </Button>
+                </Viewbox>
+             
                 <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="30, 0">
-                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\play.png" />
+                    <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\play.png" />
+                    </Button>
                 </Viewbox> 
+            
                 <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
+                <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
                     <Image Source="C:\Users\USER\Documents\WPF music player\Assets\next.png" />
+                </Button>
                 </Viewbox>
             </StackPanel>
 
         </StackPanel>
+
+        
     </Grid>
 </Window>
