@@ -13,6 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using Microsoft.Win32;
+using System.Windows.Threading;
+using TagLib;
+using System.IO;
+using System.Windows.Media.Imaging;
+using NAudio;
+using NAudio.FileFormats;
+using NAudio.FileFormats.Mp3;
+using NAudio.Wave;
+
 
 namespace WPF_music_player
 {
@@ -21,20 +31,86 @@ namespace WPF_music_player
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MediaPlayer mediaPlayer = new MediaPlayer();
+        
         public MainWindow()
         {
             InitializeComponent();
-
+            
+            Open_File();
+            
+			DispatcherTimer timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromSeconds(1);
+			timer.Tick += timer_Tick;
+			timer.Start();
             //TODO criar o movimento da bola que representa a duração
             // StartMovingAnimation(); 
         }
 
-        private void Play_Click(object sender, RoutedEventArgs e) { // Evento que lida com click para play, stop, next e previous. Falta ajustar para cada botão, mas está funcionando o clique
+        private void btnOpenAudioFile_Click(object sender, RoutedEventArgs e)
+		{
+            Open_File();
+        }
+
+        private void Open_File()
+		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
             
-            Button button = (Button)sender;
-            button.Background = button.Background is SolidColorBrush solidColorBrush && solidColorBrush.Color == Colors.Black? Brushes.Transparent : Brushes.Black;
-            Console.WriteLine("I'm playing!");
-            Console.WriteLine(e);
+			if(openFileDialog.ShowDialog() == true)
+
+                try 
+                {
+                    mediaPlayer.Open(new Uri(openFileDialog.FileName));
+                    BitmapImage bitmapImage = new BitmapImage();
+                    bitmapImage.BeginInit();
+                    bitmapImage.UriSource = new Uri(openFileDialog.FileName);
+                    bitmapImage.EndInit();
+                    songCover.Source = bitmapImage;
+                    
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            
+			mediaPlayer.Play();
+            btnPlay.Visibility = Visibility.Collapsed;
+            btnPause.Visibility = Visibility.Visible;
+
+			DispatcherTimer timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromSeconds(1);
+			timer.Tick += timer_Tick;
+			timer.Start();
+		}
+
+        void timer_Tick(object sender, EventArgs e)
+		{
+			if(mediaPlayer.Source != null)
+            {
+                lblStatus.Content = String.Format("{0}", mediaPlayer.Position.ToString(@"mm\:ss"));
+                lblDuration.Content = String.Format("{0}", mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+            }
+            else 
+            {
+                lblStatus.Content = "00:00";
+            }
+				
+		}
+
+        private void PlaySound(object sender, RoutedEventArgs e)
+        {
+
+            mediaPlayer.Play();
+            btnPlay.Visibility = Visibility.Collapsed;
+            btnPause.Visibility = Visibility.Visible;
+        }
+
+        private void StopSound(object sender, RoutedEventArgs e)
+        {
+            mediaPlayer.Pause();
+            btnPlay.Visibility = Visibility.Visible;
+            btnPause.Visibility = Visibility.Collapsed;
         }
     
         private void StartMovingAnimation() {

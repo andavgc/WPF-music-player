@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:WPF_music_player"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    
     <Grid>
         <Grid.RowDefinitions>
         <RowDefinition Height="2*"/>
@@ -16,27 +18,33 @@
 
         <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
             <Viewbox Stretch="Uniform">
-                <Image Source="C:\Users\USER\Documents\WPF music player\Assets\album_cover.png"/>
+                <Grid>
+                    <Image Name="songCover" Source="C:\Users\USER\Documents\WPF music player\Assets\images\soundon.png" />
+                </Grid>
             </Viewbox>
         </StackPanel>
 
         <StackPanel Grid.Row="1">
+            <Grid>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Viewbox Width="50" Height="20" Stretch="Uniform" >
-                        <TextBlock Foreground="Black" FontSize="20" Text="0:00"/>
+                         <Label Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" FontSize="24" />
                 </Viewbox>
                 <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="left">
                     <Grid>
-                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\duration.png" />
-                        <Image x:Name="timeLapse" Source="C:\Users\USER\Documents\WPF music player\Assets\timeLapse.png" Margin="0"/>
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\duration.png" />
+                        <Image x:Name="timeLapse" Source="C:\Users\USER\Documents\WPF music player\Assets\images\timeLapse.png" Margin="0"/>
                     </Grid>
                 </Viewbox> 
                 <Viewbox Width="50" Height="20" Stretch="Uniform" >
-                        <TextBlock Foreground="Black" FontSize="20" Text="5:00"/>
+                        <Label Name="lblDuration" Content="00:00" HorizontalContentAlignment="Center" Margin="5" FontSize="24"/>
                 </Viewbox>  
             </StackPanel>
+            </Grid>
+
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 0, 0, 10">
                 <Viewbox Height="15" Stretch="Uniform" >
+                    <!-- <Label Name="SongName" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" FontSize="24" /> -->
                     <TextBlock Foreground="Black" FontSize="10" Name="SongName" Text="The bends" />
                 </Viewbox>
 
@@ -44,28 +52,36 @@
                     <TextBlock Foreground="Black" FontSize="10" Text=" - " />
                 </Viewbox>
                 <Viewbox Height="15" Stretch="Uniform">
+                    <!-- <Label Name="ArtistName" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" FontSize="24" /> -->
                     <TextBlock Foreground="Black" FontSize="10" Name="ArtistName" Text="Radiohead" />
                 </Viewbox>
             </StackPanel>
+
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
 
                 <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
-                <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
-                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\previous.png" />
+                <Button Click="PlaySound" Background="Transparent" BorderBrush="Transparent" >
+                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\previous.png" />
                 </Button>
                 </Viewbox>
-             
+
                 <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="30, 0">
-                    <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
-                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\play.png" />
+                <Grid>
+                    <Button Name="btnPlay" Background="Transparent" BorderBrush="Transparent" Visibility="Visible">
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\play.png" />
                     </Button>
-                </Viewbox> 
+                    <Button Name="btnPause" Click="StopSound" Background="Transparent" BorderBrush="Transparent" Visibility="Collapsed">
+                        <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\pause.png"/>
+                    </Button>
+                </Grid>
+                </Viewbox>
             
                 <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
-                <Button Click="Play_Click" Background="Transparent" BorderBrush="Transparent" >
-                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\next.png" />
+                <Button Background="Transparent" BorderBrush="Transparent" >
+                    <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\next.png" />
                 </Button>
                 </Viewbox>
+                <Button Name="btnOpenAudioFile" Click="btnOpenAudioFile_Click">Open Audio file</Button>
             </StackPanel>
 
         </StackPanel>
