@@ -1,28 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using Microsoft.Win32;
 using System.Windows.Threading;
-using TagLib;
-using System.IO;
-using System.Windows.Media.Imaging;
-using NAudio;
-using NAudio.FileFormats;
-using NAudio.FileFormats.Mp3;
-using NAudio.Wave;
-
 
 namespace WPF_music_player
 {
@@ -38,7 +21,6 @@ namespace WPF_music_player
             {
                 InitializeComponent();
                 songList = Open_File();
-                
             }
             catch (Exception ex)
             {
@@ -52,7 +34,7 @@ namespace WPF_music_player
 			timer.Start();
             
             // TODO criar o movimento da bola que representa a duração
-            // StartMovingAnimation(); 
+            StartMovingAnimation(); 
         }
 
         private void btnOpenAudioFile_Click(object sender, RoutedEventArgs e)
@@ -86,8 +68,6 @@ namespace WPF_music_player
                     {
                         Console.WriteLine(ex.Message);
                     }
-
-                    
 
                     DispatcherTimer timer = new DispatcherTimer();
                     timer.Interval = TimeSpan.FromSeconds(1);
@@ -152,7 +132,6 @@ namespace WPF_music_player
             btnPause.Visibility = Visibility.Collapsed;
         }
 
-
         private string[] songs;
         private int currentIndex;
         private void NextSong(object sender, RoutedEventArgs e)
@@ -171,10 +150,6 @@ namespace WPF_music_player
                 string filePath = songs[songList.CurrentIndex];
                 
                 songList = OpenSong(filePath);
-                // mediaPlayer.Open(new Uri(filePath));
-                // mediaPlayer.Play();
-
-
             }
             catch (Exception ex)
             {
@@ -200,42 +175,31 @@ namespace WPF_music_player
                 
                 string filePath = songs[songList.CurrentIndex];
                 songList = OpenSong(filePath);
-                // mediaPlayer.Open(new Uri(filePath));
-                // mediaPlayer.Play();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex}");
             }
         }
-
         
         private void ChangeVolume(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             mediaPlayer.Volume = volumeSlider.Value;
         }
         
-        
         private void StartMovingAnimation() {
-
-            DoubleAnimation animationX = new DoubleAnimation
+            
+            try 
             {
-                From = 0,
-                To = 200, // Punto final X
-                Duration = TimeSpan.FromSeconds(5), // Duración de la animación en segundos
-                FillBehavior = FillBehavior.Stop // Detiene la animación en su posición final
-            };
-
-            Storyboard.SetTarget(animationX, timeLapse);
-            Storyboard.SetTargetProperty(animationX, new PropertyPath("(Grid.Margin).(Thickness.Left)"));
-
-
-            Storyboard storyboard = new Storyboard();
-            storyboard.Children.Add(animationX);
-
-            storyboard.Begin();
-
+                DoubleAnimation animationX = new DoubleAnimation();
+                animationX.Duration = TimeSpan.Parse(songList.CurrentSong.Duration);  // Duração da animação em segundos
+                animationX.From = Canvas.GetLeft(TimeLapse);     // Valor inicial da coordenada X
+                animationX.To = 300;
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"{ex}");
+            }
         }
-
     }
 }

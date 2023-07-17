@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_music_player"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize" MinHeight="450" MinWidth="450">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="CanResize" MinHeight="450" MinWidth="450" MaxHeight="450" MaxWidth="450">
 
     
     <Grid>
@@ -29,7 +29,6 @@
                 <Button Background="#1F6E8C" Foreground="White" Margin="1050, 650, 20, 20" MaxHeight="60" MaxWidth="220" Name="btnOpenAudioFile" FontSize="30" Click="btnOpenAudioFile_Click">Abrir arquivo</Button>
             </Grid>
         </Viewbox>
-
         
         <StackPanel Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                     <Grid>
@@ -40,7 +39,7 @@
                         <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="left">
                             <Grid>
                                 <Image Source="C:\Users\USER\Documents\WPF music player\Assets\images\duration.png" />
-                                <Image x:Name="timeLapse" Source="C:\Users\USER\Documents\WPF music player\Assets\images\timeLapse.png" Margin="0"/>
+                                <Image x:Name="TimeLapse" Source="C:\Users\USER\Documents\WPF music player\Assets\images\timeLapse.png" Margin="0"/>
                             </Grid>
                         </Viewbox> 
                         <Viewbox Width="50" Height="20" Stretch="Uniform" >

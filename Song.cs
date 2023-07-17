@@ -15,6 +15,6 @@ namespace WPF_music_player
         public string Duration { get => duration; set => duration = value; } 
 
          public Song(string name, string duration) => 
-                (this.name, this.duration) = (name,duration);
+                (this.name, this.duration) = (name, duration);
     }
 }
