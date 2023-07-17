@@ -1,0 +1,15 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Assets",
+      "appliesTo": "Assets/",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-WPF music player",
+      "appliesTo": "WPF music player.csproj",
+      "type": "msbuild"
+    }
+  ]
+}
