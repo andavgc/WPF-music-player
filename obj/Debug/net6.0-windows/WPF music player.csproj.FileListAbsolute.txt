@@ -19,3 +19,33 @@ C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\refint\WPF mus
 C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.pdb
 C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\WPF music player.genruntimeconfig.cache
 C:\Users\USER\Documents\WPF music player\obj\Debug\net6.0-windows\ref\WPF music player.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\WPF music player.exe
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\WPF music player.deps.json
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\WPF music player.runtimeconfig.json
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\WPF music player.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\WPF music player.pdb
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.csproj.AssemblyReference.cache
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\MainWindow.g.cs
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\App.g.cs
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player_MarkupCompile.cache
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player_MarkupCompile.lref
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\MainWindow.baml
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.g.resources
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.GeneratedMSBuildEditorConfig.editorconfig
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.AssemblyInfoInputs.cache
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.AssemblyInfo.cs
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.csproj.CoreCompileInputs.cache
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.dll
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\refint\WPF music player.dll
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.pdb
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.genruntimeconfig.cache
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\ref\WPF music player.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.Asio.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.Core.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.Midi.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.Wasapi.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.WinForms.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\NAudio.WinMM.dll
+G:\lucas\_dev\WPF-music-player\bin\Debug\net6.0-windows\TagLib.Portable.dll
+G:\lucas\_dev\WPF-music-player\obj\Debug\net6.0-windows\WPF music player.csproj.CopyComplete
