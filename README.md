@@ -34,7 +34,7 @@ O aplicativo foi desenvolvido com WPF, seguindo os guidelines da Microsoft, fora
 Audissey está disponível unicamente para Windows. Para compilar o programa, primeiro é necessário ter feito o download e instalado o [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) localmente.
 Com  isso, basta baixar o programa e executá-lo utilizando o `dotnet run`.
 ```shell
-git clone https://github.com/andavgc/WPF-music-player.git
+git clone https://github.com/andavgc/audissey.git
 dotnet run
 ```
 
