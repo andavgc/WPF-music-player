@@ -9,7 +9,7 @@
 
 **Audissey** é um reprodutor de midia desenvolvido durante a disciplina de **Desenvolvimento de Interface de Usuário do curso Tecnologias Microsoft - Extecamp (Universidade Estadual de Campinas)**. 
 Ele possui um layout simples que permite as seguintes ações:
-- Reproduzir a reprodução
+- Reproduzir
 - Pausar a reprodução
 - Pular para o próximo arquivo
 - Voltar ao arquivo anterior
