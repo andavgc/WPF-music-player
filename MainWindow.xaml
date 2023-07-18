@@ -9,10 +9,6 @@
         Title="Audissey" ResizeMode="NoResize" MaxHeight="450" MaxWidth="450">
 
     <Grid>
-        <svg:Grid.ColumnDefinitions>
-            <svg:ColumnDefinition Width="367*"/>
-            <svg:ColumnDefinition Width="83*"/>
-        </svg:Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
@@ -33,7 +29,9 @@
 
         <Viewbox Stretch="Uniform" svg:Grid.ColumnSpan="2">
             <Grid HorizontalAlignment="Right" VerticalAlignment="bottom">
-                <Button Background="#1F6E8C" Foreground="White" Margin="1050, 650, 20, 20" MaxHeight="60" MaxWidth="220" Name="btnOpenAudioFile" FontSize="30" Click="btnOpenAudioFile_Click">Abrir arquivo</Button>
+                <Button Margin="1050, 650, 20, 20" MaxHeight="60" MaxWidth="220" Name="btnOpenAudioFile" FontSize="30" Click="btnOpenAudioFile_Click">
+                    <Image Source="\Assets\images\FolderOpen.png"/>
+                </Button>
             </Grid>
         </Viewbox>
 
@@ -62,15 +60,15 @@
                 </Viewbox>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 0, 0, 0">
 
-                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
+                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="10, 0">
                     <Button Click="PreviousSong" Background="Transparent" BorderBrush="Transparent" >
                         <Image Source="\Assets\images\previous.png" />
                     </Button>
                 </Viewbox>
 
-                <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="30, 0">
+                <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="10, 0">
                     <Grid>
                         <Button Name="btnPlay" Click="PlaySound" Background="Transparent" BorderBrush="Transparent" Visibility="Visible">
                             <Image Source="\Assets\images\play.png"/>
@@ -81,21 +79,28 @@
                     </Grid>
                 </Viewbox>
 
-                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="30, 0">
+                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="10, 0">
                     <Button Click="NextSong" Background="Transparent" BorderBrush="Transparent" >
                         <Image Source="\Assets\images\next.png" />
                     </Button>
                 </Viewbox>
 
+                <StackPanel Width="100" Height="100" HorizontalAlignment="Left" Margin="0,0,0,0">
+                    <Slider ValueChanged="ChangeVolume" x:Name="volumeSlider" Minimum="0" Maximum="1" Value="0.5" Orientation="Vertical" Height="100" Width="20" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
+                        <svg:Slider.RenderTransform>
+                            <svg:TransformGroup>
+                                <svg:ScaleTransform/>
+                                <svg:SkewTransform/>
+                                <svg:RotateTransform Angle="90"/>
+                                <svg:TranslateTransform/>
+                            </svg:TransformGroup>
+                        </svg:Slider.RenderTransform>
+                    </Slider>
+                </StackPanel>
             </StackPanel>
 
 
         </StackPanel>
-
-        <StackPanel Width="100" Height="100" Grid.Row="1" HorizontalAlignment="Left" svg:Grid.ColumnSpan="2" Margin="350,13,0,12">
-            <Slider ValueChanged="ChangeVolume" x:Name="volumeSlider" Minimum="0" Maximum="1" Value="0.5" Orientation="Vertical" Height="100" Width="20" VerticalAlignment="Center" />
-        </StackPanel>
-
 
     </Grid>
 </Window>
