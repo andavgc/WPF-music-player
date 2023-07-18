@@ -41,9 +41,14 @@
                     <Viewbox Width="50" Height="20" Stretch="Uniform" >
                         <Label Name="lblStatus" Content="Not playing..." HorizontalContentAlignment="Center" Margin="5" FontSize="24" />
                     </Viewbox>
-                    <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="left">
+                    <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="Center">
                         <Grid>
-                            <Slider ValueChanged="TimeLapseModification" PreviewMouseDown="positionSliderSkip" x:Name="TimeLapseSlider" Minimum="0" Maximum="1" Value="0.0" Margin="0" Width="320"/>
+                            <Slider 
+                                ValueChanged="TimeLapseModification" 
+                                PreviewMouseDown="positionSliderSkip" 
+                                x:Name="TimeLapseSlider" 
+                                Minimum="0" Maximum="1" Value="0.0" Margin="0" Width="350"
+                                Style="{DynamicResource Horizontal_Slider}"/>
                         </Grid>
                     </Viewbox>
                     <Viewbox Width="50" Height="20" Stretch="Uniform" >
@@ -61,13 +66,13 @@
 
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Margin="0, 0, 0, 0">
 
-                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="10, 0">
+                <Viewbox Width="40" Height="40" Stretch="Uniform" Margin="5, 0">
                     <Button Click="PreviousSong" Background="Transparent" BorderBrush="Transparent" >
                         <Image Source="\Assets\images\previous.png" />
                     </Button>
                 </Viewbox>
 
-                <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="10, 0">
+                <Viewbox Width="80" Height="80" Stretch="Uniform" Margin="5, 0">
                     <Grid>
                         <Button Name="btnPlay" Click="PlaySound" Background="Transparent" BorderBrush="Transparent" Visibility="Visible">
                             <Image Source="\Assets\images\play.png"/>
@@ -84,22 +89,16 @@
                     </Button>
                 </Viewbox>
 
-                <StackPanel Width="100" Height="100" HorizontalAlignment="Left" Margin="0,0,0,0">
-                    <Slider ValueChanged="ChangeVolume" x:Name="volumeSlider" Minimum="0" Maximum="1" Value="0.5" Orientation="Vertical" Height="100" Width="20" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" >
-                        <svg:Slider.RenderTransform>
-                            <svg:TransformGroup>
-                                <svg:ScaleTransform/>
-                                <svg:SkewTransform/>
-                                <svg:RotateTransform Angle="90"/>
-                                <svg:TranslateTransform/>
-                            </svg:TransformGroup>
-                        </svg:Slider.RenderTransform>
-                    </Slider>
-                </StackPanel>
             </StackPanel>
-
-
+            <StackPanel Width="100" Height="100" HorizontalAlignment="Right" Margin="0, -50, 20, 50">
+                <Slider Style="{DynamicResource Horizontal_Slider}" 
+                        ValueChanged="ChangeVolume" x:Name="volumeSlider" 
+                        Minimum="0" Maximum="1" Value="0.5" 
+                        Orientation="Horizontal" 
+                        Height="20" Width="100"
+                        >
+                </Slider>
+            </StackPanel>
         </StackPanel>
-
     </Grid>
 </Window>
