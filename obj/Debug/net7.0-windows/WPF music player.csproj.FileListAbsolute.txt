@@ -29,3 +29,5 @@ G:\lucas\_dev\WPF-music-player\obj\Debug\net7.0-windows\WPF music player.pdb
 G:\lucas\_dev\WPF-music-player\obj\Debug\net7.0-windows\WPF music player.genruntimeconfig.cache
 G:\lucas\_dev\WPF-music-player\obj\Debug\net7.0-windows\ref\WPF music player.dll
 G:\lucas\_dev\WPF-music-player\bin\Debug\net7.0-windows\FontAwesome.WPF.dll
+G:\lucas\_dev\WPF-music-player\obj\Debug\net7.0-windows\App.baml
+G:\lucas\_dev\WPF-music-player\obj\Debug\net7.0-windows\WPF music player_Content.g.cs

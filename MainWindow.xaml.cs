@@ -193,7 +193,7 @@ namespace WPF_music_player
             {
                 DoubleAnimation animationX = new DoubleAnimation();
                 animationX.Duration = TimeSpan.Parse(songList.CurrentSong.Duration);  // Duração da animação em segundos
-                animationX.From = Canvas.GetLeft(TimeLapse);     // Valor inicial da coordenada X
+                //animationX.From = Canvas.GetLeft(TimeLapse);     // Valor inicial da coordenada X
                 animationX.To = 300;
             }
             catch (Exception ex) 

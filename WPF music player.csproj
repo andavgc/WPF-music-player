@@ -6,6 +6,7 @@
     <RootNamespace>WPF_music_player</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\images\AppIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,10 @@
     <None Remove="Assets\Icons\FontAwesome.otf" />
     <None Remove="Assets\images\previous.png" />
     <None Remove="Assets\images\soundon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\images\AppIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>
