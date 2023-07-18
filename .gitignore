@@ -1,0 +1,9 @@
+# Binaries
+*.o
+*.pyc
+obj/
+bin/
+.vs
+
+# Directories
+debug/

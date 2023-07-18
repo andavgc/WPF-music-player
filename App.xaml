@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:WPF_music_player"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Window">
+            <Setter Property="Icon" Value="/Assets/images/soundon.png"/>
+        </Style>     
     </Application.Resources>
 </Application>
