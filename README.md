@@ -1,5 +1,5 @@
 ## Audissey - Media Player
-<img src="https://github.com/AntonyValete/jewel-collector-2.0/blob/master/assets/jc-screen.png?raw=true" 
+<img src="https://github.com/andavgc/WPF-music-player/assets/108239558/cae23ebe-227d-4905-82cc-50e590d95eb1" 
       alt="Audissey Layout" 
       align=center 
       style="display: block;
