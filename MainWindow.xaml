@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#D5D5D5" svg:Grid.ColumnSpan="2"/>
-        <Border Background="#EFEFEF" svg:Grid.ColumnSpan="2" Margin="0,0,0,0" svg:Grid.RowSpan="2"/>
+        <Border Background="#D5D5D5" svg:Grid.ColumnSpan="2" Margin="0,0,0,0" svg:Grid.RowSpan="2"/>
 
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal" svg:Grid.ColumnSpan="2" Margin="80,0,0,0">
             <Viewbox Stretch="Uniform">
@@ -45,8 +45,7 @@
                     </Viewbox>
                     <Viewbox Width="350" Height="20" Stretch="Uniform" HorizontalAlignment="left">
                         <Grid>
-                            <Image Source="\Assets\images\duration.png" />
-                            <Image x:Name="TimeLapse" Source="\Assets\images\timeLapse.png" Margin="0"/>
+                            <Slider ValueChanged="TimeLapseModification" PreviewMouseDown="positionSliderSkip" x:Name="TimeLapseSlider" Minimum="0" Maximum="1" Value="0.0" Margin="0" Width="320"/>
                         </Grid>
                     </Viewbox>
                     <Viewbox Width="50" Height="20" Stretch="Uniform" >

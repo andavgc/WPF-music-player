@@ -6,6 +6,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
 using Microsoft.Win32;
 using System.Windows.Threading;
+using System.Windows.Input;
+
 
 namespace WPF_music_player
 {
@@ -32,9 +34,6 @@ namespace WPF_music_player
 			timer.Interval = TimeSpan.FromSeconds(1);
 			timer.Tick += timer_Tick;
 			timer.Start();
-            
-            // TODO criar o movimento da bola que representa a duração
-            StartMovingAnimation(); 
         }
 
         private void btnOpenAudioFile_Click(object sender, RoutedEventArgs e)
@@ -103,12 +102,14 @@ namespace WPF_music_player
             return songList;
         }
 
-        void timer_Tick(object sender, EventArgs e)
+        private void timer_Tick(object sender, EventArgs e)
 		{
 			if(mediaPlayer.Source != null)
             {
                 lblStatus.Content = String.Format("{0}", mediaPlayer.Position.ToString(@"mm\:ss"));
                 lblDuration.Content = String.Format("{0}", mediaPlayer.NaturalDuration.TimeSpan.ToString(@"mm\:ss"));
+                TimeLapseSlider.Value = mediaPlayer.Position.TotalSeconds;
+                TimeLapseSlider.Maximum = mediaPlayer.NaturalDuration.TimeSpan.TotalSeconds;
             }
             else 
             {
@@ -116,6 +117,31 @@ namespace WPF_music_player
             }
 				
 		}
+
+        private void TimeLapseModification(object sender, EventArgs e)
+        {
+            mediaPlayer.Position = TimeSpan.FromSeconds(TimeLapseSlider.Value);
+        }
+
+        private void positionSliderSkip(object sender, MouseButtonEventArgs e)
+        {
+            
+            if (((Slider)sender).Name == "TimeLapseSlider")
+            {
+                Point mousePosition = e.GetPosition(TimeLapseSlider);
+                double clickPercentage = mousePosition.X / TimeLapseSlider.ActualWidth;
+                double clickValue = clickPercentage * (TimeLapseSlider.Maximum - TimeLapseSlider.Minimum);
+                TimeLapseSlider.Value = clickValue;
+            } 
+            else if (((Slider)sender).Name == "volumeSlider")
+            {
+                Point mousePosition = e.GetPosition(volumeSlider);
+                double clickPercentage = mousePosition.Y / volumeSlider.ActualHeight;
+                double clickValue = clickPercentage * (volumeSlider.Maximum - volumeSlider.Minimum);
+                volumeSlider.Value = mousePosition.Y;
+            }
+            
+        }
 
         private void PlaySound(object sender, RoutedEventArgs e)
         {
@@ -187,19 +213,5 @@ namespace WPF_music_player
             mediaPlayer.Volume = volumeSlider.Value;
         }
         
-        private void StartMovingAnimation() {
-            
-            try 
-            {
-                DoubleAnimation animationX = new DoubleAnimation();
-                animationX.Duration = TimeSpan.Parse(songList.CurrentSong.Duration);  // Duração da animação em segundos
-                //animationX.From = Canvas.GetLeft(TimeLapse);     // Valor inicial da coordenada X
-                animationX.To = 300;
-            }
-            catch (Exception ex) 
-            {
-                MessageBox.Show($"{ex}");
-            }
-        }
     }
 }
