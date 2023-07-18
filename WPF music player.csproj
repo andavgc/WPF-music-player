@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="Assets\images\duration.png" />
+    <None Remove="Assets\images\FolderOpen.png" />
     <None Remove="Assets\images\next.png" />
     <None Remove="Assets\images\pause.png" />
     <None Remove="Assets\images\play.png" />
@@ -31,6 +32,9 @@
 
   <ItemGroup>
     <Resource Include="Assets\images\duration.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\images\FolderOpen.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\images\next.png">
